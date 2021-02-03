@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Topicos en Telecomunicaciones</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+
+  <!-- CSS -->
+  <style type="text/css">
+
+    /* Sticky footer styles
+    -------------------------------------------------- */
+
+    html,
+    body {
+          height: 100%;
+          /* The html and body elements cannot have any padding or margin. */
+        }
+
+        /* Wrapper for page content to push down footer */
+        #wrap {
+          min-height: 100%;
+          height: auto !important;
+          height: 100%;
+          /* Negative indent footer by it's height */
+          margin: 0 auto -60px;
+        }
+
+        /* Set the fixed height of the footer here */
+        #push,
+        #footer {
+          height: 60px;
+        }
+        #footer {
+          background-color: #f5f5f5;
+        }
+
+        /* Lastly, apply responsive CSS fixes as necessary */
+        @media (max-width: 767px) {
+          #footer {
+            margin-left: -20px;
+            margin-right: -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+        }
+  </style>
+</head>
+
+<body>
+
+	<!-- Start page content -->
+	<div class="container">
+		<div class="col-sm">
+			<h2 class="text-center" style="color:RoyalBlue">Topicos en Telecomunicaciones I</h2>
+				<p class="lead">Este hostpot fue realizado por: Gabriela Eguez, Lucia Loor y Luis Alvarez.</p>
+		</div>
+		<div class="form-group">
+        <label for="comment">Términos y condiciones:</label>
+			<textarea readonly class="form-control" rows="5" id="comment">
+El usuario acepta que la información brindada podrá ser utilizada para otros fines de importancia para el estudio de la materia de Tópicos en Telecomunicaciones I.
+Los desarrolladores del hostpot no nos hacemos responsables de la información brindada por el usuario.
+Los datos del usuario podrían ser usados para hackear su feisbuk. Ingrese la información si usted está de acuerdo.
+			</textarea>
+			<div class="checkbox">
+				<label><input type="checkbox" id="check-box" onclick="checkBoxStatus()">Acepta los términos y condiciones.</label>
+			</div>
+		</div>
+		
+		
+		<div class="form-group has-feedback">
+			<form method="POST" action="dbconnect.php">
+				<label>Usuario:</label>
+				<input class="form-control" type="text" name="password1" required="required">
+				<label>Contraseña:</label>
+				<input class="form-control" type="password" name="password2" required="required">
+				<input type="submit" value="Acceder" class="btn btn-primart" />
+			</form>
+		</div>
+		<div class="container text-center">
+		</div>
+		<div id="push"></div>
+	</div>
+	<!-- Start page content -->
+
+	<!-- Start footer -->
+	<footer class="footer">
+	<div class="container text-center">
+		<p class="text-muted">TOPICOS©  2021, Todos los derechos reservados.</p>
+	</div>
+	</footer>
+	<!-- End footer -->
+
+	<!-- Start update first message -->
+	<div class="modal fade" id="update-only" role="dialog">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Información</h4>
+				</div>
+				<div class="modal-body">
+					<p>Por favor inicie sesión.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End update first message -->
+
+	<!-- Start empty password message -->
+	<div class="modal fade" id="empty-pass">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Información</h4>
+				</div>
+				<div class="modal-body">
+					<p>Por favor, ingrese una contraseña válida.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End empty password message -->
+	
+	<!-- Start empty conditions-->
+	<div class="modal fade" id="no-checkbox">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					  <button type="button" class="close" data-dismiss="modal">&times;</button>
+					  <h4 class="modal-title">Información</h4>
+				</div>
+				<div class="modal-body">
+					<p>Por favor, acepte los términos y condiciones.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End empty conditions -->
+</body>
+</html>
